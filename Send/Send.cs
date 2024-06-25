@@ -6,14 +6,25 @@ var factory = new ConnectionFactory { HostName = "localhost"};
 using var connection = factory.CreateConnection();
 using var channel = connection.CreateModel();
 
-channel.QueueDeclare(queue: "hello", durable: false, exclusive: false, autoDelete: false, arguments: null);
+channel.QueueDeclare(queue: "hello"
+                    , durable: false
+                    , exclusive: false
+                    , autoDelete: false
+                    , arguments: null);
 
-const string msg = "Hello world";
-var body = Encoding.UTF8.GetBytes(msg);
+while (true)
+{
+    Console.WriteLine("Type a message ... (Type END to close the program)");
+    var msg = Console.ReadLine();
 
-channel.BasicPublish(exchange: string.Empty, routingKey: "hello", basicProperties: null, body: body);
+    if (msg == "END")
+        return;
 
-Console.WriteLine($" [x] Sent {msg}");
-Console.WriteLine(" Press [enter] to exit.");
+    var body = Encoding.UTF8.GetBytes(msg);
 
-Console.ReadLine();
+    channel.BasicPublish(exchange: string.Empty
+                        , routingKey: "hello"
+                        , basicProperties: null
+                        , body: body)
+    ;
+}
