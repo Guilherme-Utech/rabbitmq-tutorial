@@ -1,0 +1,5 @@
+C:\git\rabbitmq-tutorial\publish-subscribe\ReceiveLogs\obj\Debug\net8.0\ReceiveLogs.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\rabbitmq-tutorial\publish-subscribe\ReceiveLogs\obj\Debug\net8.0\ReceiveLogs.AssemblyInfoInputs.cache
+C:\git\rabbitmq-tutorial\publish-subscribe\ReceiveLogs\obj\Debug\net8.0\ReceiveLogs.AssemblyInfo.cs
+C:\git\rabbitmq-tutorial\publish-subscribe\ReceiveLogs\obj\Debug\net8.0\ReceiveLogs.csproj.CoreCompileInputs.cache
+C:\git\rabbitmq-tutorial\publish-subscribe\ReceiveLogs\obj\Debug\net8.0\ReceiveLogs.sourcelink.json
